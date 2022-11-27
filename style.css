@@ -1,0 +1,258 @@
+/* Credit to https://courses.joshwcomeau.com/css-for-js/treasure-trove/010-global-styles */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Main css */
+
+:root {
+  --hero-bg: #1f2937;
+  --hero-primary: #f9faf8;
+  --hero-secondary: #e5e7eb;
+  --action-primary: #3882f6;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+header,
+footer {
+  background-color: var(--hero-bg);
+  color: var(--hero-primary);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 0 160px;
+  padding-top: 16px;
+  padding-bottom: 48px;
+}
+
+header section:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+p.hero-secondary {
+  margin-bottom: 16px;
+}
+
+.hero-section button {
+  cursor: pointer;
+  padding: 4px 24px;
+  color: inherit;
+  background-color: var(--action-primary);
+  border: none;
+  border-radius: 8px;
+}
+
+.hero-logo {
+  font-size: 24px;
+  color: var(--hero-primary);
+}
+
+.hero-secondary {
+  font-size: 18px;
+  color: var(--hero-secondary);
+}
+
+.information-section {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 160px;
+}
+
+.information-section h2 {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--hero-bg);
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  flex: 1;
+}
+
+.quote-section {
+  background-color: var(--hero-secondary);
+  padding: 48px 320px;
+}
+
+.quote-section > figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-text {
+  font-size: 2.25rem;
+  font-style: italic;
+  font-weight: 200;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+}
+
+figure > figcaption {
+  align-self: flex-end;
+}
+
+.author {
+  font-weight: bold;
+}
+
+.action-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 160px;
+}
+
+.action {
+  width: 100%;
+  border-radius: 8px;
+  padding: 32px 56px;
+  color: var(--hero-primary);
+  background-color: var(--action-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+}
+
+.action-btn {
+  cursor: pointer;
+  padding: 4px 24px;
+  color: inherit;
+  background-color: inherit;
+  border: 1px solid var(--hero-primary);
+  border-radius: 8px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0;
+}
